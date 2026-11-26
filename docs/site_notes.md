@@ -1,5 +1,12 @@
 # Site notes
 
+## Changes made after these notes were written (2026-11-26)
+- `data/ATTRIBUTION.md`, `data/feeds.csv` and `data/DATA_DICTIONARY.md` now exist. CI runs `check_site.py --strict`.
+- City pages show `data_caveat` (plain wording) instead of the raw `relaxations` text. The table column "Data caveat" follows the same field.
+- Residents are stored with three decimals, so a hexagon just under 100 residents no longer displays as 100.
+- The Natural Earth outline is credited in `data/ATTRIBUTION.md`.
+- The notes below are the site builder's original record. Where they say something is missing, check this list first.
+
 ## What is in this bundle
 
 - `site/` static source. `index.html` (world map and table), `about.html`, `city.html` (template for city pages).
