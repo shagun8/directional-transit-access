@@ -1,0 +1,2 @@
+city,city_name,n_tracts,n_SI,n_FS,n_EN,n_desert,n_SI_with_car_directions,n_FS_with_car_directions,median_blocked_SI,median_blocked_FS,residents_SI,share_city_residents_SI,n_SI_half_blocked,residents_SI_half_blocked,S_SI,S_FS,Q_SI,Q_FS,direction_share,direction_share_eligible,direction_share_small_gap,direction_share_reversed,labels_old_input_known
+santaana,Santa Ana,71,9,27,9,26,9,27,0.5,0.2,50282,0.1203546347137981,6,36877,0.38703703703703707,0.7350529100529102,0.10168727095656255,0.240177716394075,0.427358570941059,True,False,False,True

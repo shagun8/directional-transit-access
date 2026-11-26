@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About – Transit access by direction</title>
+<meta name="description" content="What the maps show, how the numbers are made, and their limits.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-root="">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Transit access by direction</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">All cities</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap prose">
+  <h1>What this map shows</h1>
+  <ul>
+    <li>Most transit scores ask one question: is a stop near where people live?</li>
+    <li>This map asks a second question: from that stop, which directions can you travel?</li>
+    <li>For each small area we look in eight compass directions.</li>
+    <li>A direction counts if a car reaches at least five other areas that way within 30 minutes.</li>
+    <li>A direction is blocked if transit, leaving between 08:00 and 09:00 on a weekday, reaches none of them within 30 minutes.</li>
+    <li>Blocked share = blocked directions divided by the directions a car can reach.</li>
+  </ul>
+  <h2>The headline number for a city</h2>
+  <ul>
+    <li>Start with the residents the UN transit indicator (SDG 11.2.1) counts as served: within 500 m of a bus or tram stop, or 1,000 m of a rail, metro, ferry or marked rapid-bus stop.</li>
+    <li>The headline is the share of those residents who live in areas where at least half of the directions a car can reach are blocked.</li>
+  </ul>
+  <h2>The four classes</h2>
+  <ul>
+    <li>Coverage is the share of an area's residents near a stop. Access is the share of the city's mapped places that transit reaches within 30 minutes.</li>
+    <li>Each is split at the city's own median. That gives four classes: Full Service (high coverage, high access), Stranded Infrastructure (high coverage, low access), Efficient Network (low coverage, high access) and Transit Desert (low coverage, low access).</li>
+    <li>Classes are relative to each city. Do not compare classes or ranks between cities.</li>
+  </ul>
+  <h2>Why a direction fails</h2>
+  <ul>
+    <li>Missing: no route leaves the area in that direction.</li>
+    <li>Dead: a route points that way but reaches nothing within 30 minutes.</li>
+    <li>Thin: transit reaches something, but less than is typical for Full Service areas in the same city.</li>
+  </ul>
+  <h2>Direction or distance</h2>
+  <ul>
+    <li>s is the share of car-reachable directions that transit serves.</li>
+    <li>q is, in the served directions, the places transit reaches divided by the places a car reaches.</li>
+    <li>s times q is transit reach relative to car reach.</li>
+  </ul>
+  <h2>Units</h2>
+  <ul>
+    <li>71 cities are mapped on hexagons (H3 resolution 8, under 1 square kilometre each).</li>
+    <li>32 US cities are also mapped on census tracts.</li>
+    <li>Hexagon and tract values are not comparable. The unit changes the numbers.</li>
+  </ul>
+  <h2>Limits</h2>
+  <ul>
+    <li>Car times are free-flow. Congestion is not modelled, so a car reaches more than it would in traffic.</li>
+    <li>Travel times run from the centre of one area to the centre of another.</li>
+    <li>One threshold is used: 30 minutes. With 45 minutes far fewer directions are blocked.</li>
+    <li>One time window is used: a weekday, 08:00 to 09:00, median travel time.</li>
+    <li>Schedule files miss informal transit in many cities. Some cities use older or unofficial files; their pages carry a data caveat.</li>
+    <li>Places are all mapped OpenStreetMap features, so they follow how complete the map is in each city.</li>
+    <li>City boundaries differ: urban centres outside the US, city tract sets in the US.</li>
+    <li>Population comes from WorldPop 2020 in most cities, Meta HRSL 2020 in Chennai and Delhi, the 2020 US Census for US hexagons and the 2024 American Community Survey for US tracts.</li>
+  </ul>
+  <h2>Data, code and licence</h2>
+  <ul>
+    <li>Code is released under the MIT licence. Data are released under the Open Database License (ODbL) 1.0.</li>
+    <li>Sources and their licences are listed in the <a class="inline-tap" href="data/ATTRIBUTION.md">attribution file</a>.</li>
+    <li>This site sets no cookies and runs no analytics. Background map tiles come from OpenFreeMap.</li>
+  </ul>
+  <h2>How to cite</h2>
+  <ul>
+    <li>The paper is in preparation. Until it is published, please cite the code and data repository.</li>
+  </ul>
+  <p><a class="card-link" href="index.html">← All cities</a></p>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Code: MIT. Data: ODbL 1.0. Built from OpenStreetMap, public transit schedules (GTFS), WorldPop, Meta HRSL and US Census data. No cookies, no tracking.</p>
+    <p><a href="about.html">About this map</a> <a href="data/ATTRIBUTION.md">Sources and licences</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (no Java, no routing engine)
+        run: pip install -e ".[test]"
+      - name: Scan for secrets, personal paths and banned columns
+        run: python scripts/scan_release.py .
+      - name: Unit tests, Jerusalem regression, site build test
+        run: pytest -q
+      - name: Build the site and check every page
+        run: |
+          python scripts/build_site.py --data data --site site --out _site
+          python scripts/check_site.py _site --expect-cities 71 --strict

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__CITY_NAME__ – Transit access by direction</title>
+<meta name="description" content="Map of __CITY_NAME__: the compass directions that transit reaches within 30 minutes, compared with a car.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<!--IF_PUBLIC-->
+<link rel="stylesheet" href="__ROOT__vendor/maplibre-gl/maplibre-gl.css">
+<!--END_PUBLIC-->
+<link rel="stylesheet" href="__ROOT__assets/css/site.css">
+</head>
+<body data-root="__ROOT__" data-city="__CITY__">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="__ROOT__index.html">Transit access by direction</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="__ROOT__index.html">All cities</a>
+      <a href="__ROOT__about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <p class="crumb"><a href="__ROOT__index.html">← All cities</a></p>
+  <h1 id="city-title">__CITY_NAME__</h1>
+  <p id="city-sub" class="muted">__COUNTRY__</p>
+  <p class="note plain" id="note-classes">Classes and ranks are relative to each city. Do not compare them between cities.</p>
+<!--IF_US-->
+  <p class="note" id="note-units">Hexagon and tract values are not comparable. The unit changes the numbers.</p>
+<!--END_US-->
+<!--IF_HELD-->
+  <p class="note" id="note-held">Cell-level data for this city are not yet published. The source and licence of its schedule files are being confirmed.</p>
+<!--END_HELD-->
+  <div class="layout">
+<!--IF_PUBLIC-->
+    <section id="map-col" aria-label="Map">
+      <form class="controls" id="controls" onsubmit="return false">
+<!--IF_US-->
+        <fieldset id="unit-switch">
+          <legend>Unit</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="unit" value="hex" checked><span>Hexagons</span></label>
+            <label><input type="radio" name="unit" value="tract"><span>Census tracts</span></label>
+          </div>
+        </fieldset>
+<!--END_US-->
+        <fieldset id="layer-switch">
+          <legend>Show</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="layer" value="blocked" checked><span>Blocked share</span></label>
+            <label><input type="radio" name="layer" value="coverage"><span id="coverage-label">Coverage (UN rule)</span></label>
+            <label><input type="radio" name="layer" value="class"><span>Class</span></label>
+          </div>
+        </fieldset>
+      </form>
+      <div id="map" class="map" role="application" aria-label="Map of the city. Click or tap an area to see its numbers."></div>
+      <p id="map-msg" class="map-msg" role="status"></p>
+      <div id="legend" class="legend"></div>
+    </section>
+<!--END_PUBLIC-->
+    <aside class="side" id="side">
+<!--IF_PUBLIC-->
+      <section id="cell-panel" aria-live="polite">
+        <h2>Selected area</h2>
+        <div id="cell-body"><p class="muted">Click or tap an area on the map to see its numbers.</p></div>
+      </section>
+<!--END_PUBLIC-->
+      <section id="summary">
+        <h2>City summary</h2>
+        <div id="summary-body"><p class="muted">Loading…</p></div>
+      </section>
+      <section id="downloads" class="downloads">
+        <h2>Download</h2>
+        <ul>
+<!--IF_PUBLIC-->
+          <li><a href="__ROOT__data/cells/__CITY__.geojson" download>Hexagons for this city (GeoJSON)</a></li>
+          <li><a href="__ROOT__data/cells/__CITY__.csv" download>Hexagons for this city (CSV)</a></li>
+<!--END_PUBLIC-->
+<!--IF_US-->
+          <li><a href="__ROOT__data/tracts/__CITY__.geojson" download>Census tracts for this city (GeoJSON)</a></li>
+          <li><a href="__ROOT__data/tracts/__CITY__.csv" download>Census tracts for this city (CSV)</a></li>
+<!--END_US-->
+          <li><a href="__ROOT__data/city_summary.csv" download>Summary of all cities (CSV)</a></li>
+<!--IF_US-->
+          <li><a href="__ROOT__data/tract_city_summary.csv" download>Tract summary of US cities (CSV)</a></li>
+<!--END_US-->
+        </ul>
+      </section>
+    </aside>
+  </div>
+  <noscript><p class="note">This page needs JavaScript to show the map and the numbers. The numbers are also in <a href="__ROOT__data/city_summary.csv">city_summary.csv</a>.</p></noscript>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Code: MIT. Data: ODbL 1.0. Built from OpenStreetMap, public transit schedules (GTFS), WorldPop, Meta HRSL and US Census data. No cookies, no tracking.</p>
+    <p><a href="__ROOT__about.html">About this map</a> <a href="__ROOT__data/ATTRIBUTION.md">Sources and licences</a></p>
+  </div>
+</footer>
+<!--IF_PUBLIC-->
+<script src="__ROOT__vendor/maplibre-gl/maplibre-gl.js"></script>
+<!--END_PUBLIC-->
+<script src="__ROOT__assets/js/common.js"></script>
+<script src="__ROOT__assets/js/city.js"></script>
+</body>
+</html>

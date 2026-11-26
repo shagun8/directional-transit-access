@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transit access by direction</title>
+<meta name="description" content="City maps of the compass directions that transit reaches within 30 minutes, compared with a car.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="vendor/maplibre-gl/maplibre-gl.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-root="">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Transit access by direction</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">All cities</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Transit access by direction</h1>
+  <p class="lede"><strong>The headline number.</strong> Share of residents the UN transit indicator counts as served who live where at least half of the directions a car can reach are blocked for transit.</p>
+  <div id="legend" class="legend"></div>
+  <div id="map" class="map map-world" role="application" aria-label="World map of the cities. The table below has the same numbers."></div>
+  <p id="map-msg" class="map-msg" role="status"></p>
+  <div id="city-card" class="city-card" aria-live="polite" hidden></div>
+  <p><a class="card-link" href="about.html">How the numbers are made</a></p>
+
+  <h2 id="table-title">All cities</h2>
+  <div class="table-tools">
+    <label for="sort-key">Sort by</label>
+    <select id="sort-key"></select>
+    <button type="button" id="sort-dir">High to low</button>
+  </div>
+  <table id="city-table" class="cities" aria-labelledby="table-title"></table>
+  <p class="small muted">Headline: see the sentence above the map. UN coverage: share of residents the UN transit indicator counts as served. Data caveat "Yes": the city page carries a data caveat about its schedule files.</p>
+  <noscript><p class="note">This page needs JavaScript to show the map and the table. The numbers are also in <a href="data/city_summary.csv">city_summary.csv</a>.</p></noscript>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Code: MIT. Data: ODbL 1.0. Built from OpenStreetMap, public transit schedules (GTFS), WorldPop, Meta HRSL and US Census data. No cookies, no tracking.</p>
+    <p><a href="about.html">About this map</a> <a href="data/ATTRIBUTION.md">Sources and licences</a></p>
+  </div>
+</footer>
+<script src="vendor/maplibre-gl/maplibre-gl.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/index.js"></script>
+</body>
+</html>

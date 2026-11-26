@@ -1,0 +1,23 @@
+name: dtaccess
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - openjdk=21
+  - osmium-tool=1.19.1
+  - numpy
+  - pandas=3.1.1
+  - geopandas=1.2.0
+  - shapely=2.2.0
+  - h3-py=4.5.0
+  - scipy
+  - statsmodels=0.15.0
+  - patsy
+  - pyarrow
+  - rasterio=1.5.2
+  - pyogrio=0.13.0
+  - pytest
+  - pip
+  - pip:
+      - r5py==1.1.7      # loads R5 7.5.1 (downloaded and checksum-verified on first use)
+      - -e .

@@ -1,0 +1,55 @@
+{
+ "name": "jerusalem",
+ "run_date": "2026-11-17",
+ "weekday": "Tuesday",
+ "boundary": "jerusalem.geojson",
+ "boundary_area_km2": 78.78,
+ "osm": "israel-and-palestine-latest.osm.pbf",
+ "population_source": "isr_ppp_2020_constrained.tif (raster; pixel centre -> cell)",
+ "centre": {
+  "lat": 31.778847,
+  "lon": 35.225786,
+  "rule": "place=city node of the city name inside the boundary",
+  "osm_node": "n29090735",
+  "node_name": "\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd"
+ },
+ "gtfs": [
+  {
+   "file": "jerusalem__mdb-2519.zip",
+   "md5": "bb677b6457bfc4c5f1fd0febbc700c0e"
+  }
+ ],
+ "feed_copy": "active",
+ "feed_notes": {
+  "agency_url_filled_0": 1,
+  "route_type_remapped_0": {
+   "8": 3
+  },
+  "feeds": [
+   "jerusalem__mdb-2519.zip"
+  ],
+  "active_trips": 123219,
+  "exact_twins_dropped": 0
+ },
+ "un_routes": {
+  "rail_metro_ferry_cable": 1031,
+  "brt_marked": 0,
+  "low": 6601
+ },
+ "un_brt": {},
+ "stops_by_buffer_m": {
+  "label_rule": {
+   "500": 29904,
+   "1000": 234
+  },
+  "un_rule": {
+   "500": 30059,
+   "1000": 79
+  }
+ },
+ "places_in_cells": 54284,
+ "notes": {
+  "raster_pop_outside_cells": 110307.82356333733,
+  "raster_pop_in_cells": 794897.9480476379
+ }
+}

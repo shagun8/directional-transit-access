@@ -1,0 +1,37 @@
+{
+ "city": "jerusalem",
+ "run_date": "2026-11-17",
+ "centre_names": [
+  "ירושלים",
+  "Jerusalem"
+ ],
+ "gtfs": {
+  "file": "mdb-2519-202611170156.zip",
+  "md5": "bb677b6457bfc4c5f1fd0febbc700c0e",
+  "source": "Mobility Database feed mdb-2519 (Israel Ministry of Transport and Road Safety), dataset mdb-2519-202611170156",
+  "url": "https://files.mobilitydatabase.org/mdb-2519/mdb-2519-202611170156/mdb-2519-202611170156.zip"
+ },
+ "osm": {
+  "file": "israel-and-palestine-latest.osm.pbf",
+  "md5": "f1ade9632d395bca2ec583249bc151d2",
+  "source": "Geofabrik extract, file dated 2026-11-17",
+  "url": "https://download.geofabrik.de/asia/israel-and-palestine-latest.osm.pbf",
+  "note": "Geofabrik replaces this file daily. A later file gives slightly different travel times."
+ },
+ "population": {
+  "file": "isr_ppp_2020_constrained.tif",
+  "md5": "86da907d0e97c3d1693d5423c1635de8",
+  "source": "WorldPop 2020 constrained 100 m (BSGM)",
+  "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020_Constrained/2020/BSGM/ISR/isr_ppp_2020_constrained.tif"
+ },
+ "r5_jar": {
+  "file": "r5-v7.5.1-r5py-all.jar",
+  "md5": "51a95ef65f0f9606282b8f0a8b1d0f7d",
+  "url": "https://github.com/r5py/r5/releases/download/v7.5.1-r5py/r5-v7.5.1-r5py-all.jar"
+ },
+ "boundary": {
+  "file": "inputs/boundary.geojson",
+  "md5": "e72b83135cf29323fbd73ab3ed442c55",
+  "source": "GHSL urban centre 2289 (GHS-UCDB R2024A)"
+ }
+}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "The paper is in preparation. Until it is published, please cite this repository."
+title: "Directional transit access: tool, data and map"
+type: software
+authors:
+  - family-names: Mittal
+    given-names: Shagun
+# TODO before release: complete the author list, add ORCID iDs, the Zenodo DOI and the paper reference.
+repository-code: "https://github.com/shagun8/directional-transit-access"
+url: "https://shagun8.github.io/directional-transit-access/"
+license: MIT
+version: 0.1.0
+date-released: "2026-11-26"
+keywords:
+  - public transit
+  - accessibility
+  - GTFS
+  - OpenStreetMap
+  - SDG 11.2.1
