@@ -1,18 +1,19 @@
 # Release checklist
 
-State on 2026-11-26: repository private; website public; cell layers of five cities held back on the website.
+State on 2026-11-26: repository **public**; website live; cell layers of five cities held back on the website only.
 
-## Before the repository goes public
+## Open now that the repository is public
 1. **Confirm the five earlier cities.** Bamako, Chennai, Delhi, Maputo and Nouakchott use schedule files whose source and licence are not recorded (`data/feeds.csv`).
+   - Their cell files (`data/cells/<city>.*`) are public in the repository and its history (operator decision, 2026-11-26). The website still leaves them out.
    - If confirmed open: remove the city from `site/held_cities.json`, set `cells_public` to true in `data/cities.json`, fill `data/feeds.csv`, push.
-   - If not: delete `data/cells/<city>.*` for that city **before** making the repository public. The files are in the git history; rewrite the history or start the public repository from a fresh commit.
+   - If not: delete the files and rewrite the git history. Copies already fetched cannot be recalled.
 2. **Complete `CITATION.cff`.** It lists one author, taken from the GitHub profile. Add co-authors and ORCID iDs.
 3. **Check the copyright line** in `LICENSE` ("The directional-transit-access authors").
 4. **Add formal citations** for WorldPop, Meta HRSL and GHSL to `data/ATTRIBUTION.md` (data set names and licences are there; DOIs are not).
 5. **Run** `python scripts/scan_release.py .` It must print `RESULT: clean`.
 
 ## At submission
-6. Make the repository public: Settings, General, Danger Zone, Change visibility.
+6. (Done 2026-11-26.) The repository is public.
 7. Connect Zenodo: log in at zenodo.org with GitHub, switch the repository on, then publish a GitHub release (`v1.0.0`). Zenodo mints a DOI.
 8. Put the DOI in: the paper's code availability and data availability statements, `README.md`, `CITATION.cff`, `site/about.html` ("How to cite").
 
