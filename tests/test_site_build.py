@@ -80,6 +80,8 @@ def test_build_writes_one_page_per_city(built):
         assert 'data-city="%s"' % c["city"] in page
         assert 'data-root="../../"' in page
         assert "__ROOT__" not in page and "__CITY" not in page and "<!--IF_" not in page
+        # no template placeholder of any kind may survive in a built page (restored: an earlier, broader form of this check had been dropped)
+        assert not re.search(r"__[A-Z][A-Z_]*__", page) and "<!--END_" not in page
         assert "Classes and ranks are relative to each city. Do not compare them between cities." in page
         if c["city"] in held:
             assert HELD_NOTE in page
